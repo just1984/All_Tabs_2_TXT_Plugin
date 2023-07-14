@@ -28,7 +28,7 @@ If you encounter any problems or have any suggestions for this plugin, feel free
 ## License
 This project is licensed under the terms of the MIT license.
 
-![Screenshot](./img/plugin.jpg)
+![Screenshot](./img/plugin.JPG)
 
-![Screenshot](./img/plugin2.jpg)
+![Screenshot](./img/plugin2.JPG)
 
