@@ -1,7 +1,7 @@
-# Tab2TXT_Plugin for Android Studio
+# Tabs_2_TXT_Plugin for Android Studio
 
 ## Description
-Tab2Txt_Plugin is a simple Android Studio plugin developed to save the content of all open tabs in a single .txt file.
+Tabs_2_TXT_Plugin is a simple Android Studio plugin developed to save the content of all open tabs in a single .txt file.
 
 ## Installation
 1. Clone the Project
