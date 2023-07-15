@@ -17,7 +17,7 @@ After the plugin has been successfully installed:
 1. Navigate to the Tools menu on the toolbar.
 2. Find the Save Tab Contents To File option and click on it.
 3. All open tabs content will be saved into a single .txt file.
-4. Find this file in your tmp-folder (make sure to back it up)
+4. Find this file on your Desktop
 
 ## Compatibility
 This plugin is compatible with Android Studio versions starting from 203.6668.168. The compatibility range will be updated as the plugin gets updated.
