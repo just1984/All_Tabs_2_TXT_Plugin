@@ -24,10 +24,15 @@ class TabToFileAction : AnAction() {
             fileContents.append(fileContent)
         }
 
-        val tempFile = File.createTempFile("tabContent", ".txt")
-        val writer = PrintWriter(tempFile, "UTF-8")
-        println("Die Datei wurde hier erstellt: ${tempFile.absolutePath}")
-        writer.println(fileContents.toString())
-        writer.close()
+        try {
+            val tempFile = File.createTempFile("tabContent", ".txt")
+            PrintWriter(tempFile, "UTF-8").use { writer ->
+                println("File has been created at: ${tempFile.absolutePath}")
+                writer.println(fileContents.toString())
+            }
+        } catch (ex: Exception) {
+            println("An error occurred: ${ex.message}")
+            ex.printStackTrace()
+        }
     }
 }
