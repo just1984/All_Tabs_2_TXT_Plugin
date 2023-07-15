@@ -5,7 +5,7 @@ Tabs_2_TXT_Plugin is a simple Android Studio plugin developed to save the conten
 
 ## Installation
 1. Clone the Project
-2. Build the Plugin.zip
+2. Build the Plugin.zip (./gradlew buildPlugin or gradlew.bat buildPlugin)
 3. Navigate to File -> Settings -> Plugins.
 4. Click on the gear icon -> Install Plugin from Disk....
 5. Locate the downloaded .zip file and click OK.
