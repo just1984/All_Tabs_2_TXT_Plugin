@@ -5,6 +5,8 @@ import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.vfs.VirtualFile
 import java.io.File
 import java.io.PrintWriter
+import java.nio.file.Files
+import java.nio.file.Paths
 
 class TabToFileAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
@@ -24,15 +26,12 @@ class TabToFileAction : AnAction() {
             fileContents.append(fileContent)
         }
 
-        try {
-            val tempFile = File.createTempFile("tabContent", ".txt")
-            PrintWriter(tempFile, "UTF-8").use { writer ->
-                println("File has been created at: ${tempFile.absolutePath}")
-                writer.println(fileContents.toString())
-            }
-        } catch (ex: Exception) {
-            println("An error occurred: ${ex.message}")
-            ex.printStackTrace()
-        }
+        val directoryPath = Paths.get(System.getProperty("user.home"), "Desktop")
+        Files.createDirectories(directoryPath)
+        val tempFile = File.createTempFile("tabContent", ".txt", directoryPath.toFile())
+        val writer = PrintWriter(tempFile, "UTF-8")
+        println("File has been created at: ${tempFile.absolutePath}")
+        writer.println(fileContents.toString())
+        writer.close()
     }
 }
