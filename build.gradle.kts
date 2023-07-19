@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.just161.tab2textplugin"
-version = "1.0-SNAPSHOT"
+version = "1.2"
 
 repositories {
     mavenCentral()
